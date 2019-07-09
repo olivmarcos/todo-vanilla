@@ -33,7 +33,7 @@ render();
 
 function add() {
     var itemInput = inputElement.value;
-    if (itemInput === "") {
+    if (itemInput === "" || itemInput === " ") {
         inputElement.classList.add("warn");
         setTimeout(() => {
             inputElement.classList.remove("warn");
