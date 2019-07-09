@@ -77,3 +77,8 @@ li:first-child {
 h1 {
     color:rgb(113, 89, 193);
 }
+
+/*Warn*/
+.warn {
+   box-shadow: 0 0 10px rgb(113, 89, 193);
+}

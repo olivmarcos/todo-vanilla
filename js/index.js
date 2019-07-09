@@ -34,13 +34,17 @@ render();
 function add() {
     var itemInput = inputElement.value;
     if (itemInput === "") {
-        console.warn("Erro");
+        inputElement.classList.add("warn");
+        setTimeout(() => {
+            inputElement.classList.remove("warn");
+        }, 500);
+
     } else {
         todos.push(itemInput);
         inputElement.value = '';
+        render();
+        storage();
     }
-    render();
-    storage();
 }
 
 buttonElement.onclick = add;
