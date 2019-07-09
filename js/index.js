@@ -45,6 +45,7 @@ function add() {
         render();
         storage();
     }
+    inputElement.focus();
 }
 
 buttonElement.onclick = add;
