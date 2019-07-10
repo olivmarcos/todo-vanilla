@@ -21,6 +21,7 @@ function render() {
         btnRemove.innerHTML = 'X';
         var pos = todos.indexOf(todo);
 
+        itemElement.setAttribute('ondblclick', 'edit(' + pos + ')');
         btnRemove.setAttribute('onclick', 'remove(' + pos + ')');
 
         itemElement.appendChild(itemLabel);
@@ -45,7 +46,7 @@ function add() {
         render();
         storage();
     }
-    inputElement.focus();
+    inputElement.focus();    
 }
 
 buttonElement.onclick = add;
@@ -58,4 +59,10 @@ function remove(pos) {
 
 function storage() {
     localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+function edit(pos) {    
+    todos.splice(pos, 1, "b");
+    render();
+    storage();
 }
