@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,21 @@
 </head>
 
 <body>
-    <div id="app">
-        <header>
-            <h1>todos</h1>
-        </header>
-        <section>
-            <div id="input">
-                <input type="text">
-                <button>Adicionar</button>
-            </div>
-            <div id="todo">
-                <ul></ul>
-            </div>
-        </section>
+    <div id="container">
+        <div id="app">
+            <header>
+                <h1>todos</h1>
+            </header>
+            <section>
+                <div id="input">
+                    <input class="input" type="text" placeholder="Take a note...">
+                    <button class="add">Add</button>
+                </div>
+                <div id="todo">
+                    <ul></ul>
+                </div>
+            </section>
+        </div>
     </div>
 
     <script src="/js/index.js"></script>

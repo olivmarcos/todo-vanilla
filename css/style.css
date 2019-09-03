@@ -1,17 +1,68 @@
-/* * {
+@import url('https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap');
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} */
+    font-family: 'Manjari', sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 2rem;
+    font-size: 5em;
+}
+
+.input {
+    height: 3rem;
+    width: 25rem;
+    border: 0;
+    outline: 0;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+}
+
+::placeholder {
+    padding-left: 1rem;
+}
+
+.add {
+    height: 3rem;
+    width: 4rem;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: rgb(113, 89, 193);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
 
 .itemBtn {
-    margin-left: 2rem;
     color: rgb(113, 89, 193);
     background-color: Transparent;
     border: 0;
     cursor: pointer;
 }
 
+ul:first-child {
+    margin-top: 3rem;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
 h1 {
-    color: rgb(113, 89, 193);
+    color:rgb(113, 89, 193);
 }
