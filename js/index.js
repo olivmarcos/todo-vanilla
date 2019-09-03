@@ -2,7 +2,7 @@ var listElement = document.querySelector('#todo ul');
 var inputElement = document.querySelector('#input input');
 var buttonElement = document.querySelector('#input button');
 
-var todos = JSON.parse(localStorage.getItem('todos') || []);
+var todos = JSON.parse(localStorage.getItem('todos') || "[]");
 
 function render() {
     listElement.innerHTML = '';
