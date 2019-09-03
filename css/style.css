@@ -71,6 +71,9 @@ li {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 
+li:first-child {
+    border-top: 0;
+}
 h1 {
     color:rgb(113, 89, 193);
 }
