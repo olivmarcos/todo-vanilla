@@ -6,4 +6,12 @@
 
 .itemBtn {
     margin-left: 2rem;
+    color: rgb(113, 89, 193);
+    background-color: Transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+h1 {
+    color: rgb(113, 89, 193);
 }
