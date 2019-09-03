@@ -15,6 +15,7 @@ function render() {
         itemLabel.appendChild(itemText);
 
         var btnRemove = document.createElement('button');
+        btnRemove.setAttribute('class', 'itemBtn');
         btnRemove.innerHTML = 'X';
         var pos = todos.indexOf(todo);
 
