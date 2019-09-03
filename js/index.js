@@ -2,6 +2,8 @@ var listElement = document.querySelector('#todo ul');
 var inputElement = document.querySelector('#input input');
 var buttonElement = document.querySelector('#input button');
 
+/*Funcionamento da aplicação de ToDo*/
+
 var todos = JSON.parse(localStorage.getItem('todos') || "[]");
 
 function render() {
@@ -31,8 +33,13 @@ render();
 
 function add() {
     var itemInput = inputElement.value;
-    todos.push(itemInput);
-    inputElement.value = '';
+    if (itemInput === "")
+    {
+    }
+    else {
+        todos.push(itemInput);
+        inputElement.value = '';
+    }
     render();
     storage();
 }
