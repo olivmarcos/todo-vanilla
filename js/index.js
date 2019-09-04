@@ -33,11 +33,9 @@ render();
 
 function add() {
     var itemInput = inputElement.value;
-    if (itemInput === "")
-    {
+    if (itemInput === "") {
         console.warn("Erro");
-    }
-    else {
+    } else {
         todos.push(itemInput);
         inputElement.value = '';
     }
