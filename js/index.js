@@ -46,16 +46,16 @@ function add() {
         render();
         storage();
     }
-    inputElement.focus();    
+    inputElement.focus();
 }
 
 buttonElement.onclick = add;
 
-document.body.onkeyup = function(e) {
+document.body.onkeyup = function (e) {
     if (e.keyCode == 13) {
-      add();
+        add();
     }
-  };
+};
 
 function remove(pos) {
     todos.splice(pos, 1);
@@ -63,8 +63,8 @@ function remove(pos) {
     storage();
 }
 
-function edit(pos) {       
-    todos.splice(pos, 1, "ata");
+function edit(pos) {
+    todos.splice(pos, 1, "testing...");
     render();
     storage();
 }
