@@ -57,12 +57,13 @@ function remove(pos) {
     storage();
 }
 
-function storage() {
-    localStorage.setItem('todos', JSON.stringify(todos));
-}
-
 function edit(pos) {    
     todos.splice(pos, 1, "b");
     render();
     storage();
 }
+
+function storage() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
+
