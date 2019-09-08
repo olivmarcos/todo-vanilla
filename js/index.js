@@ -51,14 +51,20 @@ function add() {
 
 buttonElement.onclick = add;
 
+document.body.onkeyup = function(e) {
+    if (e.keyCode == 13) {
+      add();
+    }
+  };
+
 function remove(pos) {
     todos.splice(pos, 1);
     render();
     storage();
 }
 
-function edit(pos) {    
-    todos.splice(pos, 1, "b");
+function edit(pos) {       
+    todos.splice(pos, 1, "ata");
     render();
     storage();
 }
@@ -66,4 +72,3 @@ function edit(pos) {
 function storage() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
-
