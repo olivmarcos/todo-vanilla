@@ -11,10 +11,18 @@ function render() {
 
     for (const todo of todos) {
         var itemElement = document.createElement('li');
-        var itemLabel = document.createElement('label');
+        var itemLabel = document.createElement('input');
         var itemText = document.createTextNode(todo);
 
+        itemLabel.setAttribute('value', itemText.textContent);
+        itemLabel.setAttribute('disabled', true);
+        itemLabel.setAttribute('type', 'text');
+        itemLabel.setAttribute('name', 'todo');
         itemLabel.appendChild(itemText);
+
+        console.log(itemText);
+        
+
 
         var btnRemove = document.createElement('button');
         btnRemove.setAttribute('class', 'itemBtn');
@@ -63,8 +71,9 @@ function remove(pos) {
     storage();
 }
 
-function edit(pos) {       
-    todos.splice(pos, 1, "ata");
+function edit(pos) {
+    var itemInpt = document.querySelector('li input');
+    itemInpt.setAttribute('disabled', false);
     render();
     storage();
 }
